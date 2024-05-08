@@ -1,9 +1,9 @@
-<?php namespace CatDesign\FixedTailorSlug;
+<?php namespace CatDesign\FixTailorSlug;
 
 use Event;
 use Backend;
 use System\Classes\PluginBase;
-use CatDesign\FixedTailorSlug\Classes\Event\EntryRecordModelHandler;
+use CatDesign\FixTailorSlug\Classes\Event\EntryRecordModelHandler;
 
 
 /**

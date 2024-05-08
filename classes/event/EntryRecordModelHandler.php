@@ -1,4 +1,4 @@
-<?php namespace CatDesign\FixedTailorSlug\Classes\Event;
+<?php namespace CatDesign\FixTailorSlug\Classes\Event;
 
 use App;
 use October\Rain\Support\Str;
