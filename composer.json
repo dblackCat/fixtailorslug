@@ -1,0 +1,8 @@
+{
+    "name": "catdesign/fixtailorslug-plugin",
+    "type": "october-plugin",
+    "description": "Correction of slug generation in Tailor",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
