@@ -20,8 +20,8 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'catdesign.fixedtailorslug::lang.plugin.name',
-            'description' => 'catdesign.fixedtailorslug::lang.plugin.description',
+            'name' => 'catdesign.fixtailorslug::lang.plugin.name',
+            'description' => 'catdesign.fixtailorslug::lang.plugin.description',
             'author' => 'CatDesign',
             'icon' => 'icon-wench'
         ];
