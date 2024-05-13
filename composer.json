@@ -2,13 +2,6 @@
     "name": "catdesign/fixtailorslug-plugin",
     "type": "october-plugin",
     "description": "Fix slug generation in Tailor",
-    "authors": [
-        {
-        "name": "Semen Kuznetsov",
-        "email": "semen@youdeveloper.ru",
-        "role": "Developer"
-        },
-    ],
     "require": {
         "composer/installers": "~1.0",
         "october/tailor": "*"
