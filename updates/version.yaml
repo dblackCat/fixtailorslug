@@ -1,3 +1,4 @@
 v1.0.0: First version FixTailorSlug
 v1.0.1: Fixed class namespace
 v1.0.2: Update composer.json dependencies
+v1.0.3: Improved multisite support

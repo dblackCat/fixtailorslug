@@ -1,6 +1,7 @@
 <?php namespace CatDesign\FixTailorSlug\Classes\Event;
 
 use App;
+use October\Rain\Support\Facades\Site;
 use October\Rain\Support\Str;
 use Tailor\Models\EntryRecord;
 
@@ -36,6 +37,10 @@ class EntryRecordModelHandler
     public function subscribe()
     {
         EntryRecord::extend(function (EntryRecord $model) {
+            if (isset($model->rules['slug'])) {
+                unset($model->rules['slug']);
+            }
+
             $model->bindEvent('model.saveInternal', function (array $modelData) use ($model) {
                 $this->activeModel = $model;
                 $this->slugAttributes();
@@ -177,9 +182,13 @@ class EntryRecordModelHandler
             $this->activeModel->isClassInstanceOf(\October\Contracts\Database\MultisiteInterface::class) &&
             $this->activeModel->isMultisiteEnabled()
         ) {
-            $query->withSite($this->activeModel->{$this->activeModel->getSiteIdColumn()});
+            $activeSiteId = $this->activeModel->{$this->activeModel->getSiteIdColumn()};
+            $activeSiteId = ($activeSiteId) ?: Site::getSiteIdFromContext();
+
+            $query->withSite($activeSiteId);
         }
 
-        return $query;
+
+        return $query->withDrafts();
     }
 }
